@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{278B4768-FC1E-4202-AA88-DFAD1E6CA680}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BanglaTestToSpeechKakatuaDotNet</RootNamespace>
+    <AssemblyName>BanglaTestToSpeechKakatuaDotNet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ap1\OneDrive\Desktop\TEST\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>99AA62ABF92B98B2868689FBA20EFAB19E0602F8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BanglaTestToSpeechKakatuaDotNet_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>..\..\Bangla-Text-To-Speech-Converter--KAKATUA-master\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>..\..\Bangla-Text-To-Speech-Converter--KAKATUA-master\packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.10.0\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABOUTUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detecting_Converting_String.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Speaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ABOUTUS.resx">
+      <DependentUpon>ABOUTUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="BanglaTestToSpeechKakatuaDotNet_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\SOUND\a.mp3" />
+    <Content Include="bin\Debug\SOUND\ab.mp3" />
+    <Content Include="bin\Debug\SOUND\ac.mp3" />
+    <Content Include="bin\Debug\SOUND\ach.mp3" />
+    <Content Include="bin\Debug\SOUND\ad.mp3" />
+    <Content Include="bin\Debug\SOUND\ad1.mp3" />
+    <Content Include="bin\Debug\SOUND\aDh.mp3" />
+    <Content Include="bin\Debug\SOUND\adh1.mp3" />
+    <Content Include="bin\Debug\SOUND\af.mp3" />
+    <Content Include="bin\Debug\SOUND\ag.mp3" />
+    <Content Include="bin\Debug\SOUND\agh.mp3" />
+    <Content Include="bin\Debug\SOUND\ah.mp3" />
+    <Content Include="bin\Debug\SOUND\aj.mp3" />
+    <Content Include="bin\Debug\SOUND\ak.mp3" />
+    <Content Include="bin\Debug\SOUND\akh.mp3" />
+    <Content Include="bin\Debug\SOUND\al.mp3" />
+    <Content Include="bin\Debug\SOUND\am.mp3" />
+    <Content Include="bin\Debug\SOUND\an.mp3" />
+    <Content Include="bin\Debug\SOUND\ap.mp3" />
+    <Content Include="bin\Debug\SOUND\ar.mp3" />
+    <Content Include="bin\Debug\SOUND\as.mp3" />
+    <Content Include="bin\Debug\SOUND\aT.mp3" />
+    <Content Include="bin\Debug\SOUND\at1.mp3" />
+    <Content Include="bin\Debug\SOUND\aTh.mp3" />
+    <Content Include="bin\Debug\SOUND\ath1.mp3" />
+    <Content Include="bin\Debug\SOUND\av.mp3" />
+    <Content Include="bin\Debug\SOUND\ay.mp3" />
+    <Content Include="bin\Debug\SOUND\b.mp3" />
+    <Content Include="bin\Debug\SOUND\ba.mp3" />
+    <Content Include="bin\Debug\SOUND\be.mp3" />
+    <Content Include="bin\Debug\SOUND\bi.mp3" />
+    <Content Include="bin\Debug\SOUND\bO.mp3" />
+    <Content Include="bin\Debug\SOUND\bOI.mp3" />
+    <Content Include="bin\Debug\SOUND\bOU.mp3" />
+    <Content Include="bin\Debug\SOUND\brri.mp3" />
+    <Content Include="bin\Debug\SOUND\bu.mp3" />
+    <Content Include="bin\Debug\SOUND\c.mp3" />
+    <Content Include="bin\Debug\SOUND\ca.mp3" />
+    <Content Include="bin\Debug\SOUND\ce.mp3" />
+    <Content Include="bin\Debug\SOUND\ch.mp3" />
+    <Content Include="bin\Debug\SOUND\cha.mp3" />
+    <Content Include="bin\Debug\SOUND\che.mp3" />
+    <Content Include="bin\Debug\SOUND\chi.mp3" />
+    <Content Include="bin\Debug\SOUND\chO.mp3" />
+    <Content Include="bin\Debug\SOUND\chOI.mp3" />
+    <Content Include="bin\Debug\SOUND\chOU.mp3" />
+    <Content Include="bin\Debug\SOUND\chrri.mp3" />
+    <Content Include="bin\Debug\SOUND\chu.mp3" />
+    <Content Include="bin\Debug\SOUND\ci.mp3" />
+    <Content Include="bin\Debug\SOUND\cO.mp3" />
+    <Content Include="bin\Debug\SOUND\cOI.mp3" />
+    <Content Include="bin\Debug\SOUND\cOU.mp3" />
+    <Content Include="bin\Debug\SOUND\crri.mp3" />
+    <Content Include="bin\Debug\SOUND\cu.mp3" />
+    <Content Include="bin\Debug\SOUND\D.mp3" />
+    <Content Include="bin\Debug\SOUND\d1.mp3" />
+    <Content Include="bin\Debug\SOUND\Da.mp3" />
+    <Content Include="bin\Debug\SOUND\da1.mp3" />
+    <Content Include="bin\Debug\SOUND\De.mp3" />
+    <Content Include="bin\Debug\SOUND\de1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dh.mp3" />
+    <Content Include="bin\Debug\SOUND\dh1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dha.mp3" />
+    <Content Include="bin\Debug\SOUND\dha1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dhe.mp3" />
+    <Content Include="bin\Debug\SOUND\dhe1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dhi.mp3" />
+    <Content Include="bin\Debug\SOUND\dhi1.mp3" />
+    <Content Include="bin\Debug\SOUND\DhO.mp3" />
+    <Content Include="bin\Debug\SOUND\dhO1.mp3" />
+    <Content Include="bin\Debug\SOUND\DhOI.mp3" />
+    <Content Include="bin\Debug\SOUND\dhOi1.mp3" />
+    <Content Include="bin\Debug\SOUND\DhOU.mp3" />
+    <Content Include="bin\Debug\SOUND\dhOU1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dhrri.mp3" />
+    <Content Include="bin\Debug\SOUND\dhrri1.mp3" />
+    <Content Include="bin\Debug\SOUND\Dhu.mp3" />
+    <Content Include="bin\Debug\SOUND\dhu1.mp3" />
+    <Content Include="bin\Debug\SOUND\Di.mp3" />
+    <Content Include="bin\Debug\SOUND\di1.mp3" />
+    <Content Include="bin\Debug\SOUND\DO.mp3" />
+    <Content Include="bin\Debug\SOUND\dO1.mp3" />
+    <Content Include="bin\Debug\SOUND\Doi.mp3" />
+    <Content Include="bin\Debug\SOUND\dOI1.mp3" />
+    <Content Include="bin\Debug\SOUND\DOU.mp3" />
+    <Content Include="bin\Debug\SOUND\dOU1.mp3" />
+    <Content Include="bin\Debug\SOUND\Drri.mp3" />
+    <Content Include="bin\Debug\SOUND\drri1.mp3" />
+    <Content Include="bin\Debug\SOUND\Du.mp3" />
+    <Content Include="bin\Debug\SOUND\du1.mp3" />
+    <Content Include="bin\Debug\SOUND\e.mp3" />
+    <Content Include="bin\Debug\SOUND\eb.mp3" />
+    <Content Include="bin\Debug\SOUND\ec.mp3" />
+    <Content Include="bin\Debug\SOUND\ech.mp3" />
+    <Content Include="bin\Debug\SOUND\eD.mp3" />
+    <Content Include="bin\Debug\SOUND\ed1.mp3" />
+    <Content Include="bin\Debug\SOUND\eDh.mp3" />
+    <Content Include="bin\Debug\SOUND\edh1.mp3" />
+    <Content Include="bin\Debug\SOUND\ef.mp3" />
+    <Content Include="bin\Debug\SOUND\eg.mp3" />
+    <Content Include="bin\Debug\SOUND\egh.mp3" />
+    <Content Include="bin\Debug\SOUND\eh.mp3" />
+    <Content Include="bin\Debug\SOUND\ej.mp3" />
+    <Content Include="bin\Debug\SOUND\ek.mp3" />
+    <Content Include="bin\Debug\SOUND\ekh.mp3" />
+    <Content Include="bin\Debug\SOUND\el.mp3" />
+    <Content Include="bin\Debug\SOUND\em.mp3" />
+    <Content Include="bin\Debug\SOUND\en.mp3" />
+    <Content Include="bin\Debug\SOUND\ep.mp3" />
+    <Content Include="bin\Debug\SOUND\er.mp3" />
+    <Content Include="bin\Debug\SOUND\es.mp3" />
+    <Content Include="bin\Debug\SOUND\eT.mp3" />
+    <Content Include="bin\Debug\SOUND\et1.mp3" />
+    <Content Include="bin\Debug\SOUND\eTh.mp3" />
+    <Content Include="bin\Debug\SOUND\eth1.mp3" />
+    <Content Include="bin\Debug\SOUND\ey.mp3" />
+    <Content Include="bin\Debug\SOUND\f.mp3" />
+    <Content Include="bin\Debug\SOUND\fa.mp3" />
+    <Content Include="bin\Debug\SOUND\fe.mp3" />
+    <Content Include="bin\Debug\SOUND\fi.mp3" />
+    <Content Include="bin\Debug\SOUND\fO.mp3" />
+    <Content Include="bin\Debug\SOUND\fOI.mp3" />
+    <Content Include="bin\Debug\SOUND\fOU.mp3" />
+    <Content Include="bin\Debug\SOUND\frri.mp3" />
+    <Content Include="bin\Debug\SOUND\fu.mp3" />
+    <Content Include="bin\Debug\SOUND\g.mp3" />
+    <Content Include="bin\Debug\SOUND\ga.mp3" />
+    <Content Include="bin\Debug\SOUND\ge.mp3" />
+    <Content Include="bin\Debug\SOUND\gh.mp3" />
+    <Content Include="bin\Debug\SOUND\gha.mp3" />
+    <Content Include="bin\Debug\SOUND\ghe.mp3" />
+    <Content Include="bin\Debug\SOUND\ghi.mp3" />
+    <Content Include="bin\Debug\SOUND\ghO.mp3" />
+    <Content Include="bin\Debug\SOUND\ghOI.mp3" />
+    <Content Include="bin\Debug\SOUND\ghOU.mp3" />
+    <Content Include="bin\Debug\SOUND\ghrri.mp3" />
+    <Content Include="bin\Debug\SOUND\ghu.mp3" />
+    <Content Include="bin\Debug\SOUND\gi.mp3" />
+    <Content Include="bin\Debug\SOUND\gO.mp3" />
+    <Content Include="bin\Debug\SOUND\gOI.mp3" />
+    <Content Include="bin\Debug\SOUND\gOU.mp3" />
+    <Content Include="bin\Debug\SOUND\grri.mp3" />
+    <Content Include="bin\Debug\SOUND\gu.mp3" />
+    <Content Include="bin\Debug\SOUND\h.mp3" />
+    <Content Include="bin\Debug\SOUND\ha.mp3" />
+    <Content Include="bin\Debug\SOUND\he.mp3" />
+    <Content Include="bin\Debug\SOUND\hi.mp3" />
+    <Content Include="bin\Debug\SOUND\hO.mp3" />
+    <Content Include="bin\Debug\SOUND\hOI.mp3" />
+    <Content Include="bin\Debug\SOUND\hOU.mp3" />
+    <Content Include="bin\Debug\SOUND\hu.mp3" />
+    <Content Include="bin\Debug\SOUND\i.mp3" />
+    <Content Include="bin\Debug\SOUND\ib.mp3" />
+    <Content Include="bin\Debug\SOUND\ic.mp3" />
+    <Content Include="bin\Debug\SOUND\ich.mp3" />
+    <Content Include="bin\Debug\SOUND\iD.mp3" />
+    <Content Include="bin\Debug\SOUND\id1.mp3" />
+    <Content Include="bin\Debug\SOUND\iDh.mp3" />
+    <Content Include="bin\Debug\SOUND\idh1.mp3" />
+    <Content Include="bin\Debug\SOUND\if.mp3" />
+    <Content Include="bin\Debug\SOUND\ig.mp3" />
+    <Content Include="bin\Debug\SOUND\igh.mp3" />
+    <Content Include="bin\Debug\SOUND\ih.mp3" />
+    <Content Include="bin\Debug\SOUND\ij.mp3" />
+    <Content Include="bin\Debug\SOUND\ik.mp3" />
+    <Content Include="bin\Debug\SOUND\ikh.mp3" />
+    <Content Include="bin\Debug\SOUND\il.mp3" />
+    <Content Include="bin\Debug\SOUND\im.mp3" />
+    <Content Include="bin\Debug\SOUND\in.mp3" />
+    <Content Include="bin\Debug\SOUND\ip.mp3" />
+    <Content Include="bin\Debug\SOUND\ir.mp3" />
+    <Content Include="bin\Debug\SOUND\ir1.mp3" />
+    <Content Include="bin\Debug\SOUND\is.mp3" />
+    <Content Include="bin\Debug\SOUND\iT.mp3" />
+    <Content Include="bin\Debug\SOUND\iTh.mp3" />
+    <Content Include="bin\Debug\SOUND\ith1.mp3" />
+    <Content Include="bin\Debug\SOUND\iy.mp3" />
+    <Content Include="bin\Debug\SOUND\j.mp3" />
+    <Content Include="bin\Debug\SOUND\ja.mp3" />
+    <Content Include="bin\Debug\SOUND\je.mp3" />
+    <Content Include="bin\Debug\SOUND\jh.mp3" />
+    <Content Include="bin\Debug\SOUND\ji.mp3" />
+    <Content Include="bin\Debug\SOUND\jO.mp3" />
+    <Content Include="bin\Debug\SOUND\jOI.mp3" />
+    <Content Include="bin\Debug\SOUND\jOU.mp3" />
+    <Content Include="bin\Debug\SOUND\jrri.mp3" />
+    <Content Include="bin\Debug\SOUND\ju.mp3" />
+    <Content Include="bin\Debug\SOUND\k.mp3" />
+    <Content Include="bin\Debug\SOUND\ka.mp3" />
+    <Content Include="bin\Debug\SOUND\ka1.mp3" />
+    <Content Include="bin\Debug\SOUND\ke.mp3" />
+    <Content Include="bin\Debug\SOUND\kh.mp3" />
+    <Content Include="bin\Debug\SOUND\kha.mp3" />
+    <Content Include="bin\Debug\SOUND\khe.mp3" />
+    <Content Include="bin\Debug\SOUND\khi.mp3" />
+    <Content Include="bin\Debug\SOUND\khO.mp3" />
+    <Content Include="bin\Debug\SOUND\khOI.mp3" />
+    <Content Include="bin\Debug\SOUND\khOU.mp3" />
+    <Content Include="bin\Debug\SOUND\khrri.mp3" />
+    <Content Include="bin\Debug\SOUND\khu.mp3" />
+    <Content Include="bin\Debug\SOUND\ki.mp3" />
+    <Content Include="bin\Debug\SOUND\kO.mp3" />
+    <Content Include="bin\Debug\SOUND\kOI.mp3" />
+    <Content Include="bin\Debug\SOUND\kOU.mp3" />
+    <Content Include="bin\Debug\SOUND\krri.mp3" />
+    <Content Include="bin\Debug\SOUND\ku.mp3" />
+    <Content Include="bin\Debug\SOUND\l.mp3" />
+    <Content Include="bin\Debug\SOUND\la.mp3" />
+    <Content Include="bin\Debug\SOUND\le.mp3" />
+    <Content Include="bin\Debug\SOUND\li.mp3" />
+    <Content Include="bin\Debug\SOUND\lO.mp3" />
+    <Content Include="bin\Debug\SOUND\lOI.mp3" />
+    <Content Include="bin\Debug\SOUND\lOU.mp3" />
+    <Content Include="bin\Debug\SOUND\lrri.mp3" />
+    <Content Include="bin\Debug\SOUND\lu.mp3" />
+    <Content Include="bin\Debug\SOUND\m.mp3" />
+    <Content Include="bin\Debug\SOUND\ma.mp3" />
+    <Content Include="bin\Debug\SOUND\me.mp3" />
+    <Content Include="bin\Debug\SOUND\mi.mp3" />
+    <Content Include="bin\Debug\SOUND\mO.mp3" />
+    <Content Include="bin\Debug\SOUND\mOI.mp3" />
+    <Content Include="bin\Debug\SOUND\mOU.mp3" />
+    <Content Include="bin\Debug\SOUND\mrri.mp3" />
+    <Content Include="bin\Debug\SOUND\mu.mp3" />
+    <Content Include="bin\Debug\SOUND\n.mp3" />
+    <Content Include="bin\Debug\SOUND\n2.mp3" />
+    <Content Include="bin\Debug\SOUND\na.mp3" />
+    <Content Include="bin\Debug\SOUND\ne.mp3" />
+    <Content Include="bin\Debug\SOUND\NG %282%29.mp3" />
+    <Content Include="bin\Debug\SOUND\ng.mp3" />
+    <Content Include="bin\Debug\SOUND\NG1.mp3" />
+    <Content Include="bin\Debug\SOUND\ni.mp3" />
+    <Content Include="bin\Debug\SOUND\nO.mp3" />
+    <Content Include="bin\Debug\SOUND\nOI.mp3" />
+    <Content Include="bin\Debug\SOUND\nOU.mp3" />
+    <Content Include="bin\Debug\SOUND\nrri.mp3" />
+    <Content Include="bin\Debug\SOUND\nu.mp3" />
+    <Content Include="bin\Debug\SOUND\o.mp3" />
+    <Content Include="bin\Debug\SOUND\O1.mp3" />
+    <Content Include="bin\Debug\SOUND\ob.mp3" />
+    <Content Include="bin\Debug\SOUND\oc.mp3" />
+    <Content Include="bin\Debug\SOUND\och.mp3" />
+    <Content Include="bin\Debug\SOUND\oD.mp3" />
+    <Content Include="bin\Debug\SOUND\od1.mp3" />
+    <Content Include="bin\Debug\SOUND\oDh.mp3" />
+    <Content Include="bin\Debug\SOUND\odh1.mp3" />
+    <Content Include="bin\Debug\SOUND\of.mp3" />
+    <Content Include="bin\Debug\SOUND\og.mp3" />
+    <Content Include="bin\Debug\SOUND\ogh.mp3" />
+    <Content Include="bin\Debug\SOUND\oh.mp3" />
+    <Content Include="bin\Debug\SOUND\OI.mp3" />
+    <Content Include="bin\Debug\SOUND\oj.mp3" />
+    <Content Include="bin\Debug\SOUND\ok.mp3" />
+    <Content Include="bin\Debug\SOUND\ol.mp3" />
+    <Content Include="bin\Debug\SOUND\om.mp3" />
+    <Content Include="bin\Debug\SOUND\on.mp3" />
+    <Content Include="bin\Debug\SOUND\op.mp3" />
+    <Content Include="bin\Debug\SOUND\or.mp3" />
+    <Content Include="bin\Debug\SOUND\os.mp3" />
+    <Content Include="bin\Debug\SOUND\oT.mp3" />
+    <Content Include="bin\Debug\SOUND\ot1.mp3" />
+    <Content Include="bin\Debug\SOUND\oTh.mp3" />
+    <Content Include="bin\Debug\SOUND\oth1.mp3" />
+    <Content Include="bin\Debug\SOUND\OU.mp3" />
+    <Content Include="bin\Debug\SOUND\ov.mp3" />
+    <Content Include="bin\Debug\SOUND\oy.mp3" />
+    <Content Include="bin\Debug\SOUND\p.mp3" />
+    <Content Include="bin\Debug\SOUND\pa.mp3" />
+    <Content Include="bin\Debug\SOUND\pe.mp3" />
+    <Content Include="bin\Debug\SOUND\pi.mp3" />
+    <Content Include="bin\Debug\SOUND\pO.mp3" />
+    <Content Include="bin\Debug\SOUND\pOI.mp3" />
+    <Content Include="bin\Debug\SOUND\pOU.mp3" />
+    <Content Include="bin\Debug\SOUND\prri.mp3" />
+    <Content Include="bin\Debug\SOUND\pu.mp3" />
+    <Content Include="bin\Debug\SOUND\r.mp3" />
+    <Content Include="bin\Debug\SOUND\ra.mp3" />
+    <Content Include="bin\Debug\SOUND\re.mp3" />
+    <Content Include="bin\Debug\SOUND\ri.mp3" />
+    <Content Include="bin\Debug\SOUND\rO.mp3" />
+    <Content Include="bin\Debug\SOUND\rOI.mp3" />
+    <Content Include="bin\Debug\SOUND\rOU.mp3" />
+    <Content Include="bin\Debug\SOUND\rri.mp3" />
+    <Content Include="bin\Debug\SOUND\rrri.mp3" />
+    <Content Include="bin\Debug\SOUND\ru.mp3" />
+    <Content Include="bin\Debug\SOUND\s.mp3" />
+    <Content Include="bin\Debug\SOUND\sa.mp3" />
+    <Content Include="bin\Debug\SOUND\se.mp3" />
+    <Content Include="bin\Debug\SOUND\si.mp3" />
+    <Content Include="bin\Debug\SOUND\sO.mp3" />
+    <Content Include="bin\Debug\SOUND\sOI.mp3" />
+    <Content Include="bin\Debug\SOUND\sOU.mp3" />
+    <Content Include="bin\Debug\SOUND\space.mp3" />
+    <Content Include="bin\Debug\SOUND\srri.mp3" />
+    <Content Include="bin\Debug\SOUND\su.mp3" />
+    <Content Include="bin\Debug\SOUND\t %282%29.mp3" />
+    <Content Include="bin\Debug\SOUND\T.mp3" />
+    <Content Include="bin\Debug\SOUND\t1.mp3" />
+    <Content Include="bin\Debug\SOUND\Ta.mp3" />
+    <Content Include="bin\Debug\SOUND\ta1.mp3" />
+    <Content Include="bin\Debug\SOUND\Te.mp3" />
+    <Content Include="bin\Debug\SOUND\te1.mp3" />
+    <Content Include="bin\Debug\SOUND\Th.mp3" />
+    <Content Include="bin\Debug\SOUND\th1.mp3" />
+    <Content Include="bin\Debug\SOUND\Tha.mp3" />
+    <Content Include="bin\Debug\SOUND\Tha1.mp3" />
+    <Content Include="bin\Debug\SOUND\The.mp3" />
+    <Content Include="bin\Debug\SOUND\the1.mp3" />
+    <Content Include="bin\Debug\SOUND\Thi.mp3" />
+    <Content Include="bin\Debug\SOUND\thi1.mp3" />
+    <Content Include="bin\Debug\SOUND\ThO.mp3" />
+    <Content Include="bin\Debug\SOUND\thO1.mp3" />
+    <Content Include="bin\Debug\SOUND\ThOI.mp3" />
+    <Content Include="bin\Debug\SOUND\thOI1.mp3" />
+    <Content Include="bin\Debug\SOUND\ThOU.mp3" />
+    <Content Include="bin\Debug\SOUND\thOU1.mp3" />
+    <Content Include="bin\Debug\SOUND\Thrri.mp3" />
+    <Content Include="bin\Debug\SOUND\thrri1.mp3" />
+    <Content Include="bin\Debug\SOUND\Thu.mp3" />
+    <Content Include="bin\Debug\SOUND\thu1.mp3" />
+    <Content Include="bin\Debug\SOUND\Ti.mp3" />
+    <Content Include="bin\Debug\SOUND\ti1.mp3" />
+    <Content Include="bin\Debug\SOUND\TO.mp3" />
+    <Content Include="bin\Debug\SOUND\tO1.mp3" />
+    <Content Include="bin\Debug\SOUND\TOI.mp3" />
+    <Content Include="bin\Debug\SOUND\tOI1.mp3" />
+    <Content Include="bin\Debug\SOUND\TOU.mp3" />
+    <Content Include="bin\Debug\SOUND\tOU1.mp3" />
+    <Content Include="bin\Debug\SOUND\Trri.mp3" />
+    <Content Include="bin\Debug\SOUND\trri1.mp3" />
+    <Content Include="bin\Debug\SOUND\Tu.mp3" />
+    <Content Include="bin\Debug\SOUND\tu1.mp3" />
+    <Content Include="bin\Debug\SOUND\u.mp3" />
+    <Content Include="bin\Debug\SOUND\U1.mp3" />
+    <Content Include="bin\Debug\SOUND\ub.mp3" />
+    <Content Include="bin\Debug\SOUND\uc.mp3" />
+    <Content Include="bin\Debug\SOUND\uch.mp3" />
+    <Content Include="bin\Debug\SOUND\uD.mp3" />
+    <Content Include="bin\Debug\SOUND\ud1.mp3" />
+    <Content Include="bin\Debug\SOUND\uDh.mp3" />
+    <Content Include="bin\Debug\SOUND\udh1.mp3" />
+    <Content Include="bin\Debug\SOUND\uf.mp3" />
+    <Content Include="bin\Debug\SOUND\ug.mp3" />
+    <Content Include="bin\Debug\SOUND\ugh.mp3" />
+    <Content Include="bin\Debug\SOUND\uh.mp3" />
+    <Content Include="bin\Debug\SOUND\uj.mp3" />
+    <Content Include="bin\Debug\SOUND\uk.mp3" />
+    <Content Include="bin\Debug\SOUND\ukh.mp3" />
+    <Content Include="bin\Debug\SOUND\ul.mp3" />
+    <Content Include="bin\Debug\SOUND\um.mp3" />
+    <Content Include="bin\Debug\SOUND\un.mp3" />
+    <Content Include="bin\Debug\SOUND\up.mp3" />
+    <Content Include="bin\Debug\SOUND\ur.mp3" />
+    <Content Include="bin\Debug\SOUND\us.mp3" />
+    <Content Include="bin\Debug\SOUND\uT.mp3" />
+    <Content Include="bin\Debug\SOUND\ut1.mp3" />
+    <Content Include="bin\Debug\SOUND\uTh.mp3" />
+    <Content Include="bin\Debug\SOUND\uth1.mp3" />
+    <Content Include="bin\Debug\SOUND\uv.mp3" />
+    <Content Include="bin\Debug\SOUND\uy.mp3" />
+    <Content Include="bin\Debug\SOUND\v.mp3" />
+    <Content Include="bin\Debug\SOUND\va.mp3" />
+    <Content Include="bin\Debug\SOUND\ve.mp3" />
+    <Content Include="bin\Debug\SOUND\vi.mp3" />
+    <Content Include="bin\Debug\SOUND\vO.mp3" />
+    <Content Include="bin\Debug\SOUND\vOI.mp3" />
+    <Content Include="bin\Debug\SOUND\vOU.mp3" />
+    <Content Include="bin\Debug\SOUND\vrri.mp3" />
+    <Content Include="bin\Debug\SOUND\vu.mp3" />
+    <Content Include="bin\Debug\SOUND\y.mp3" />
+    <Content Include="bin\Debug\SOUND\ya.mp3" />
+    <Content Include="bin\Debug\SOUND\ye.mp3" />
+    <Content Include="bin\Debug\SOUND\yi.mp3" />
+    <Content Include="bin\Debug\SOUND\yi1.mp3" />
+    <Content Include="bin\Debug\SOUND\yO.mp3" />
+    <Content Include="bin\Debug\SOUND\yOI.mp3" />
+    <Content Include="bin\Debug\SOUND\yOU.mp3" />
+    <Content Include="bin\Debug\SOUND\yu.mp3" />
+    <Content Include="bin\Debug\SOUND\yu1.mp3" />
+    <Content Include="bin\Debug\SOUND\z.wav" />
+    <Content Include="bin\Debug\SOUND\ঙ.mp3" />
+    <Content Include="bin\Debug\SOUND\ঞ.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
